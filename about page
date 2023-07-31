@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;font-family:Arial}
+
+.homenav {
+  overflow: hidden;
+  background-color: #5C9B93;
+}
+
+.homenav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #80928F;
+  color: white;
+}
+
+.homenav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.homenav a:hover, .dropdown:hover .dropbtn {
+  background-color: #80928F;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #C0CBC9;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .homenav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .homenav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homenav.responsive {position: relative;}
+  .homenav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .homenav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .homenav.responsive .dropdown {float: none;}
+  .homenav.responsive .dropdown-content {position: relative;}
+  .homenav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+body {
+background-color: #B0E3DA;
+}
+
+</style>
+</head>
+<body>
+
+<div class="homenav" id="myhomenav">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Coaching 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="personalcoachingpage.html">Personal Coaching</a>
+      <a href="professionalcoachingpage.html">Professional Coaching</a>
+      <a href="wellnesscoachingpage.html">Wellness Coaching</a>
+      <a href="corporatecoachingpage.html">Corporate Coaching</a>
+    </div>
+  </div>
+  <a href="workshoppage.html">Workshop</a> 
+  <a href="aboutpage.html">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2><center> Aapta</center></h2>
+  <p><center>This is about page</center></p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myhomenav");
+  if (x.className === "homenav") {
+    x.className += " responsive";
+  } else {
+    x.className = "homenav";
+  }
+}
+</script>
+
+</body>
+</html>
